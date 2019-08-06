@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px) {
+  .header-main img, .logo, #header-top-1, .col-sm-4 i, .post-new, .header-button, .column-2 {
+    display: none;
+  }
+  .column-1 {
+    width: 100%;
+  }
+  div#menu-icon img {
+    width: 20%;
+  }
+
+  #thong-tin {
+    display: none;
+  }
+
+  #header-top-2 {
+    font-size: 90%;
+  }
+
+}
+
+@media only screen and (max-width: 399px) {
+  div#product p[style="font-size: 90%;"] {
+    display: none;
+  }
+
+  #form-thong-tin-phu {
+    display: none;
+  }
+}

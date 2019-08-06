@@ -1,0 +1,24 @@
+.vido-main {
+  padding: 15px;
+}
+
+/* Thông tin sản phẩm */
+.vido-main-block {
+  margin-top: 20px;
+}
+
+.page-main-content-confirm {
+  padding: 20px;
+  text-align: center;
+  border: 1.5px solid green;
+  border-radius: 10px;
+}
+
+.confirm-title {
+  color: green;
+  text-align: center;
+}
+
+.item-summary {
+  text-align: left;
+}

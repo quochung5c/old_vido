@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dang-tin-cho-thue.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/main.js"></script>
+    <title>Đăng tin cho thuê hoặc bán</title>
+    <style>
+        input {color: #000;}.icon {width: 300px;height: 300px;margin: 6px;}.gallery {display: flex;flex-wrap: wrap;width: 100%;margin-top:10px;}.template {display: flex;flex-direction: column;padding: 10px;border: 1px solid gainsboro;
+    margin-right: 15px;margin-bottom: 10px;position: relative;}.cate-label {font-weight: 600;margin-top: 5px;}.x-close {position: absolute;}.nothing {display: none;}
+    </style>
+</head>
+
+<body>
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col" style="text-align: left;">
+                    <a href="" style="padding-right: 20px;">
+                        <i class="fa fa-phone"></i>
+                        097 347 1728
+                    </a>
+                    <a href="">
+                        <i class="fa fa-envelope"></i>
+                        tdo@gmail.com
+                    </a>
+                </div>
+                <div class="col" style="text-align: right;">
+                    <div class="login-regis dropdown">
+                        <b class="greeting dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown">
+                            <i class="fa fa-user-circle" style="font-size:20px;vertical-align: center;"></i> Nguyễn
+                            Quốc
+                            Hùng </b>
+                        <ul class=" drop-change dropdown-menu">
+                            <li>
+                                <a href="#">Thông tin cá nhân</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="#">Danh sách cho thuê</a>
+                            </li>
+                            <li>
+                                <a href="#">Danh sách cần thuê</a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-sign-out"></i> Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Form đăng nhập -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Đăng nhập tài khoản</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="GET">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Tên tài khoản">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                            <input type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Mật khẩu">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn submit-logIn">Đăng nhập</button>
+                </div>
+                <div class="media-login">
+                    <p class="center-pt">Hoặc đăng nhập với</p>
+                    <div class="btn-group">
+                        <a class="btn btn-primary btn-item" href="#">
+                            <i class="fa fa-facebook-square"></i> Facebook</a>
+                        <a class="btn btn-danger btn-item" href="#">
+                            <i class="fa fa-envelope"></i> Gmail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hết form đăng nhập -->
+
+    <!-- Form đăng ký -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModal">Đăng kí tài khoản</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="media-login">
+                        <p class="center-pt">Có thể đăng kí với:</p>
+                        <div class="btn-group">
+                            <a class="btn btn-primary btn-item" href="#">
+                                <i class="fa fa-facebook-square"></i> Facebook</a>
+                            <a class="btn btn-danger btn-item" href="#">
+                                <i class="fa fa-envelope"></i> Gmail</a>
+                        </div>
+                    </div>
+                    <form method="GET">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Tên tài khoản">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="E-mail">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                            <input type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Mật khẩu">
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                            <input type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nhập lại mật khẩu">
+                        </div>
+                        <br>
+                        <div class="confirm-auth">
+                            <input type="checkbox" name="authen">
+                            Tôi đồng ý với <a href="#" style="color:green;font-style: italic;">điều
+                                khoản</a> sử dụng.
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn submit-logIn ">Đăng kí</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header-main sticky">
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <a href="index.html"><img src="image/logo-white.png" alt="" width="120px;" height="auto;"></a>
+                    </div>
+                    <div class="col-md-7">
+                        <form class="form-search" action="#">
+                            <input type="text" placeholder="Tìm kiếm sản phẩm" name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <a href=""><i class="fa fa-shopping-cart" style="font-size: 300%;"></i></a>
+                                </div>
+                                <div class="col-sm-8">
+                                    <a href="#">
+                                        <div class="">
+                                            <div class="dropdown">
+                                                <div class="post-new">
+                                                    Đăng Tin
+                                                </div>
+                                                <div class="dropdown-content">
+                                                    <a href="#">Thuê đồ</a>
+                                                    <a href="#">Bán đồ</a>
+                                                    <a href="#">Tin cần đồ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="header-button">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="dropdown">
+                        &ensp;Danh Mục &ensp;
+                        <i class="fa fa-caret-down"></i>
+                        <div class="dropdown-content">
+                            <a href="#">Máy ảnh</a>
+                            <a href="#">Xe máy</a>
+                            <a href="#">Đồ phượt</a>
+                            <a href="#">Đàn guitar</a>
+                            <a href="#">Sách</a>
+                            <a href="#">Trang phục</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    Tin Cần Thuê
+                </div>
+                <div class="col-sm">
+                    Mã Giảm Giá
+                </div>
+                <div class="col-sm">
+                    Nạp Thẻ
+                </div>
+                <div class="col-sm">
+
+                </div>
+                <div class="col-sm">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Phần thân -->
+
+    <div class="vido-main">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb container">
+                    <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Đăng tin cho thuê - bán</li>
+                </ol>
+            </nav>
+            <div class="page-main-content">
+                <div class="category-title">ĐĂNG TIN CHO THUÊ - BÁN</div>
+                <form>
+                    <div class="user-input-block">
+                        <!-- <div class="uploading-block">
+                            <div class="block-label"> I. TẢI ẢNH LÊN <span class="err-icon">(*)</span></div>
+                            <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+                                <div style='height: 0px;width: 0px; overflow:hidden;'><input id="upfile" type="file"
+                                        value="upload" onchange="sub(this)" /></div>
+                            </form>
+                        </div> -->
+                        <div class="basic-information-block">
+                            <div class="block-label "> I. THÔNG TIN CƠ BẢN </div>
+                            <div class="content-box">
+                                <div class="form-row">
+                                    <div class="form-group col-md-5">
+                                        <label for="inputEmail4" class="parent-label">Hình thức <span class="err-icon">(*)</span></label>
+                                        <select class="form-control" id="hinhThuc" required oninput="clearHT()">
+                                            <option value="default" selected>Chọn...</option>
+                                            <option value="hire">Thuê đồ</option>
+                                            <option value="sell">Bán đồ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="inputEmail4" class="parent-label">Tình trạng <span class="err-icon">(*)</span></label>
+                                        <select class="form-control">
+                                            <option selected>Chọn...</option>
+                                            <option value="newGood">Đồ mới</option>
+                                            <option value="oldGood">Đồ cũ</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <label for="inputEmail4" class="parent-label">Năm mua <span class="err-icon">(*)</span></label>
+                                        <select class="form-control">
+                                            <option selected>---</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2018">2018</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputAddress2" class="parent-label">Giá thuê:</label>
+                                        <div class="input-group mb-3">
+                                            <input id="input-1" type="text" class="form-control" placeholder="Đơn vị: VNĐ"
+                                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <select class="form-control" required>
+                                                    <option>/ngày</option>
+                                                    <option>/giờ</option>
+                                                    <option>/ngày</option>
+                                                    <option>/tuần</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputAddress2" class="parent-label">Giá bán:</label>
+                                        <input id="input-2" type="text" class="form-control" id="inputAddress2"
+                                            placeholder=" Đơn vị: VNĐ">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4" class="parent-label">Thành phố/Tỉnh</label>
+                                        <select class="form-control">
+                                            <option selected>Chọn...</option>
+                                            <option>TP Hà Nội</option>
+                                            <option>Tỉnh Hà Nam</option>
+                                            <option>TP Bắc Ninh</option>
+                                            <option>Tp. Hồ Chí Minh</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputEmail4" class="parent-label">Quận/huyện</label>
+                                        <select class="form-control">
+                                            <option selected>Chọn...</option>
+                                            <option>Quận Thanh Xuân</option>
+                                            <option>Quận Gò Vấp</option>
+                                            <option>Quận Bình Thạch</option>
+                                            <option>Phường Mỹ Tho</option>
+                                            <option>Quận Ba Đình</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail4" class="parent-label">Danh mục sản phẩm</label>
+                                    <select id="book" class="form-control"  oninput="bookForm()">
+                                        <option value="default">Sản phẩm</option>
+                                        <option value="camera">Máy ảnh</option>
+                                        <option value="travel">Đồ phượt</option>
+                                        <option value="book">Sách</option>
+                                        <option value="clothes">Trang phục</option>
+                                        <option value="guitar">Đàn guitar</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="not-for-book">
+                            <div class="specific-info-block">
+                                <div class="block-label"> II. THÔNG TIN CHI TIẾT SẢN PHẨM </div>
+                                <div class="form-group">
+                                    <label for="inputAddress2" class="parent-label">Tải ảnh lên:</label>
+                                    <input type="file" id="avatar" name="avatar" multiple accept="image/png, image/jpeg">
+                                </div>
+                                <div class="content-box">
+                                    <div class="form-group">
+                                        <label for="inputAddress2" class="parent-label">Tên sản phẩm:</label>
+                                        <input type="text" class="form-control" id="inputAddress2" placeholder="Tên sản phẩm....">
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-9">
+                                            <label for="inputEmail4" class="parent-label">Danh mục sản phẩm</label>
+                                            <select oninput="clearBook()" id="book" class="form-control">
+                                                <option value="default">Sản phẩm</option>
+                                                <option value="camera">Máy ảnh</option>
+                                                <option value="travel">Đồ phượt</option>
+                                                <option value="book">Sách</option>
+                                                <option value="clothes">Trang phục</option>
+                                                <option value="guitar">Đàn guitar</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="inputAddress2" class="parent-label">Số lượng:</label>
+                                            <input type="number" class="form-control" id="inputAddress2" placeholder="Số lượng sản phẩm">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-group">
+                                            <label for="description" class="parent-label">Mô tả sản phẩm</label>
+                                            <textarea placeholder="Mô tả sản phẩm" class="comment-box form-control"
+                                                name="describe-item" id="describe-item"></textarea>
+                                            <script>
+                                                CKEDITOR.replace('describe-item');</script>
+                                        </div>
+                                        <div class="form-group" id="status">
+                                            <label for="status" class="parent-label">Mô tả hiện trạng sản phẩm</label>
+                                            <textarea id="item-stat" placeholder="Bề ngoài, chất lượng,...." class="comment-box form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="forHiringBlock">
+                                <div class="block-label"> III. MỤC DÀNH CHO SẢN PHẨM CHO THUÊ </div>
+                                <label for="status" class="parent-label label-lg">1. Điều kiện thuê</label>
+                                <div class="checkbox-block">
+                                    <label class="ctn">CMT/Thẻ căn cước
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="ctn">Bằng lái xe
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="ctn">Thẻ học sinh/sinh viên
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="flexy">
+                                        <label class="ctn">Đặt cọc tiền
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <input type="number" class="moneyInput"> .đ
+                                    </div>
+                                </div>
+                                <div class="freeTime">
+                                    <label class="parent-label label-lg">2. Thời gian rảnh cho thuê:</label>
+                                    <div class="dateRangeInput ">
+                                        <div class="fromDateRange col-md-6">
+                                            <small>Từ</small>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                        <div class="toDateRange col-md-6">
+                                            <small>đến</small>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="status" class="parent-label label-lg">
+                                    <label class="ctn"> Trong vòng 36 giờ sau khi mua hàng có thể trả lại sản phẩm và
+                                        sẽ
+                                        trả phí thuê tương ứng.
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </label>
+                                <div class="footer-input">
+                                    <div class="submit-group">
+                                        <button class="btn btn-default delete-new-post">HỦY</button>
+                                        <button type="submit" class="btn btn-outline-primary submit-new-post"
+                                            data-toggle="modal" data-target="#confirmNewPost">ĐĂNG TIN
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="for-book">
+                            <div class="specific-info-block">
+                                <div class="block-label"> II. THÔNG TIN CHI TIẾT SẢN PHẨM </div>
+                                <div class="form-group">
+                                    <label for="inputAddress2" class="parent-label">Tải ảnh lên:</label>
+                                    <input type="file" multiple id="gallery-photo-add" />
+                                    <hr>
+                                    <label for="inputAddress2" class="parent-label">Bộ thông tin chi tiết từng sản
+                                        phẩm:</label>
+                                    <div class="gallery">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="forHiringBlock">
+                                <div class="block-label"> III. MỤC DÀNH CHO SẢN PHẨM CHO THUÊ </div>
+                                <label for="status" class="parent-label label-lg">1. Điều kiện thuê</label>
+                                <div class="checkbox-block">
+                                    <label class="ctn">CMT/Thẻ căn cước
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="ctn">Bằng lái xe
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="ctn">Thẻ học sinh/sinh viên
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="flexy">
+                                        <label class="ctn">Đặt cọc tiền
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <input type="number" class="moneyInput"> .đ
+                                    </div>
+                                </div>
+                                <div class="freeTime">
+                                    <label class="parent-label label-lg">2. Thời gian rảnh cho thuê:</label>
+                                    <div class="dateRangeInput ">
+                                        <div class="fromDateRange col-md-6">
+                                            <small>Từ</small>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                        <div class="toDateRange col-md-6">
+                                            <small>đến</small>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <label for="status" class="parent-label label-lg">
+                                    <label class="ctn"> Trong vòng 36 giờ sau khi mua hàng có thể trả lại sản phẩm và
+                                        sẽ
+                                        trả phí thuê tương ứng.
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </label>
+                                <div class="footer-input">
+                                    <div class="submit-group">
+                                        <button class="btn btn-default delete-new-post">HỦY</button>
+                                        <button type="submit" class="btn btn-outline-primary submit-new-post"
+                                            data-toggle="modal" data-target="#confirmNewPost">ĐĂNG TIN
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hết phần thân -->
+    <div class="feedback dropleft">
+        <div class="feedback-button" title="Phản hồi & Góp ý" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                class="fas fa-comments"></i></div>
+        <div class="dropdown-menu feedback-box">
+            <div class="feedback-title"> Góp ý - báo lỗi về trang web.</div>
+            <hr>
+            <div class="feedback-input">
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email: </label><span class="err-icon"></span>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ gửi phản hồi lại qua e-mail bạn
+                            đăng kí sau khi giải quyết.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Tiêu đề:</label>
+                        <input type="email" class="form-control" id="title" placeholder="Tiêu đề" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pictureExample">Ảnh minh họa</label>
+                        <input type="file" class="form-control-file" id="pictureExample">
+                    </div>
+                    <div class="form-group">
+                        <label for="feedback-input">Nội dung phản hồi - góp ý: <span class="err-icon"></span></label>
+                        <textarea class="form-control" id="feedback-input" rows="3" placeholder="Add feedback here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h5>VỀ CHÚNG TÔI</h5>
+                    <a href="">
+                        <p>Trang chủ</p>
+                    </a>
+                    <a href="">
+                        <p>Giới thiệu</p>
+                    </a>
+                    <a href="">
+                        <p>Tin tức</p>
+                    </a>
+                    <a href="">
+                        <p>Liên hệ</p>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <h5>QUY ĐỊNH VÀ CHÍNH SÁCH</h5>
+                    <a href="">
+                        <p>Quy chế hoạt động</p>
+                    </a>
+                    <a href="">
+                        <p>Quy định đăng tin</p>
+                    </a>
+                    <a href="">
+                        <p>Điều khoản sử dụng</p>
+                    </a>
+                    <a href="">
+                        <p>Chính sách bảo mật</p>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <h5>HỖ TRỢ KHÁCH HÀNG</h5>
+                    <a href="">
+                        <p>Quy trình giao dịch</p>
+                    </a>
+                    <a href="">
+                        <p>Hướng dẫn tìm kiếm</p>
+                    </a>
+                    <a href="">
+                        <p>Hướng dẫn đăng tin và quản lý tin</p>
+                    </a>
+                    <a href="">
+                        <p>Hướng dẫn up tin và up tin tự động</p>
+                    </a>
+                </div>
+                <div class="col-sm">
+                    <h5>LIÊN KẾT</h5>
+                    <a href="">
+                        <p><i class="fa fa-facebook-square"></i> Facebook</p>
+                    </a>
+                    <a href="">
+                        <p><i class="fa fa-google-plus-square"></i> Google+</p>
+                    </a>
+                    <a href="">
+                        <p><i class="fa fa-twitter-square"></i> Twitter</p>
+                    </a>
+                    <a href="">
+                        <p><i class="fa fa-instagram"></i> Instagram</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer-2">
+        <div class="container">
+            <p>© 2018 - Bản quyền của Vido.vn</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function getFile() {
+            document.getElementById("upfile").click();
+        }
+
+        function sub(obj) {
+            var file = obj.value;
+            var fileName = file.split("\\");
+            document.getElementById("yourBtn").innerHTML = fileName[fileName.length - 1];
+            document.myForm.submit();
+            event.preventDefault();
+        }
+    </script>
+    <script>
+        $(function () {
+            var imagesPreview = function (input, divSlot) {
+                if (input.files) {
+                    var soLuongFileUpload = input.files.length;
+                    for (i = 0; i < soLuongFileUpload; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function (event) {
+                            var labelClass = "cate-label";
+                            var x = $($.parseHTML("<div>"))
+                                .appendTo(divSlot)
+                                .addClass("template alert-dismissible");
+                            $($.parseHTML("<img>"))
+                                .attr("src", event.target.result)
+                                .appendTo(x)
+                                .addClass("icon");
+
+                            $($.parseHTML("<label>"))
+                                .text("Tên sản phẩm (*)")
+                                .appendTo(x)
+                                .addClass(labelClass);
+
+                            $($.parseHTML("<input>"))
+                                .attr("type", "text")
+                                .appendTo(x)
+                                .addClass("form-control");
+
+                            $($.parseHTML("<label>"))
+                                .text("Mô tả sản phẩm  (*)")
+                                .appendTo(x)
+                                .addClass(labelClass);
+
+                            $($.parseHTML("<textarea>"))
+                                .attr("placeholder", "Thêm mô tả...")
+                                .appendTo(x)
+                                .addClass("form-control");
+
+                            $($.parseHTML("<label>"))
+                                .text("Hiện trạng sản phẩm")
+                                .appendTo(x)
+                                .addClass(labelClass);
+
+                            $($.parseHTML("<textarea>"))
+                                .attr("placeholder", "Hiện trạng sản phẩm")
+                                .appendTo(x)
+                                .addClass("form-control");
+
+                            $($.parseHTML("<button>"))
+                                .attr("class", "close")
+                                .text("x")
+                                .appendTo(x)
+                                .addClass(labelClass, "close x-close")
+                                .on("click", function () {
+                                    $(".template").addClass("nothing");
+                                    alert("Deleted");
+                                });
+                        };
+                        reader.readAsDataURL(input.files[i]);
+                    }
+                }
+            };
+            $("#gallery-photo-add").on("change", function () {
+                imagesPreview(this, "div.gallery");
+            });
+        });
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

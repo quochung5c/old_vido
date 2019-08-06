@@ -1,0 +1,74 @@
+body {
+  background-color: #F4F4F4;
+}
+
+h5 {
+  font-weight: 500;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+ h5 span {
+   font-size: 85%;
+   font-weight: 400;
+ }
+
+#product-info {
+  background-color: #fff;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#product-info img {
+  width: 100%;
+  height: auto;
+}
+
+#product-info .price-product p b {
+  font-size: 120%;
+  color: #333333;
+}
+
+#product-info .price-product p strike {
+  font-size: 85%;
+  color: #A2A2A2;
+}
+
+#product-info .price-product p sale {
+  font-size: 88%;
+  background-color: #FF9601;
+  color: #fff;
+  padding: 4px 6px 4px 6px;
+  border-radius: 4px;
+}
+
+#product-info input[type="number"] {
+  width: 60%;
+  height: 30px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #C3C3C3;
+}
+
+#price {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding-right: 0px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#nut-dat-hang {
+  background-color: #FF0F1E;
+  opacity: 0.8;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#nut-dat-hang:hover {
+  cursor: pointer;
+  opacity: 1;
+}

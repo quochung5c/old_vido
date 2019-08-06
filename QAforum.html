@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+     <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous" />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+          crossorigin="anonymous" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+     <link rel="stylesheet" href="css/login.css" />
+     <link rel="stylesheet" href="css/style.css" />
+     <link rel="stylesheet" href="css/responsive.css" />
+     <script src="./js/feedback.js"></script>
+     <title>Trang Chủ | Vido.vn</title>
+     <style media="screen">
+          input {
+        color: #000;
+      }
+    </style>
+</head>
+
+<body>
+     <div class="header-top">
+          <div class="container">
+               <div class="row">
+                    <div class="col" style="text-align: left;" id="header-top-1">
+                         <a href="" style="padding-right: 20px;">
+                              <i class="fa fa-phone"></i>
+                              097 347 1728
+                         </a>
+                         <a href="">
+                              <i class="fa fa-envelope"></i>
+                              tdo@gmail.com
+                         </a>
+                    </div>
+                    <div class="col" style="text-align: right;" id="header-top-2">
+                         <a href="" class="tdo-login" data-toggle="modal" data-target="#exampleModal">
+                              <i class="fa fa-sign-in"></i>
+                              Đăng Nhập
+                         </a>
+                         <a href="" style="padding-left: 20px;" class="tdo-regis" data-toggle="modal" data-target="#registerModal">
+                              <i class="fa fa-user-plus"></i>
+                              Đăng Ký
+                         </a>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <!-- Form đăng nhập -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <h5 class="modal-title" id="exampleModalLabel">
+                              Đăng nhập tài khoản
+                         </h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                         <strong>Lỗi !</strong> Tài khoản hoặc mật khẩu bạn nhập vào không
+                         đúng.
+                         <div class="needHelp"><a href="#">Quên mật khẩu?</a></div>
+                    </div>
+                    <div class="modal-body">
+                         <form method="GET">
+                              <div class="input-group">
+                                   <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                             <i class="fa fa-user"></i>
+                                        </div>
+                                   </div>
+                                   <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                        placeholder="Tên tài khoản" />
+                              </div>
+                              <br />
+                              <div class="input-group">
+                                   <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                             <i class="fa fa-lock"></i>
+                                        </div>
+                                   </div>
+                                   <input type="password" class="form-control" id="inlineFormInputGroupUsername"
+                                        placeholder="Mật khẩu" />
+                              </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button type="submit" class="btn submit-logIn">Đăng nhập</button>
+                    </div>
+                    <div class="media-login">
+                         <p class="center-pt">Hoặc đăng nhập với</p>
+                         <div class="btn-group">
+                              <a class="btn btn-primary btn-item" href="#">
+                                   <i class="fa fa-facebook-square"></i> Facebook</a>
+                              <a class="btn btn-danger btn-item" href="#">
+                                   <i class="fa fa-envelope"></i> Gmail</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <!-- Hết form đăng nhập -->
+
+     <!-- Form đăng ký -->
+     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                    <div class="modal-header">
+                         <h5 class="modal-title" id="registerModal">Đăng kí tài khoản</h5>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                         Đăng kí tài khoản không thành công. Kiểm tra lại thông tin.
+                         <div class="needHelp"><a href="#">Cần trợ giúp?</a></div>
+                    </div>
+                    <div class="modal-body">
+                         <div class="media-login">
+                              <p class="center-pt">Có thể đăng kí với:</p>
+                              <div class="btn-group">
+                                   <a class="btn btn-primary btn-item" href="#">
+                                        <i class="fa fa-facebook-square"></i> Facebook</a>
+                                   <a class="btn btn-danger btn-item" href="#">
+                                        <i class="fa fa-envelope"></i> Gmail</a>
+                              </div>
+                         </div>
+                         <form method="GET">
+                              <div class="form-group">
+                                   <div class="input-group">
+                                        <div class="input-group-prepend">
+                                             <div class="input-group-text">
+                                                  <i class="fa fa-user"></i>
+                                             </div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                             placeholder="Tên tài khoản" />
+                                   </div>
+                                   <small class="form-text text-muted err-valid"><i class="fas fa-times"></i> Tên đăng
+                                        nhập không được chứa
+                                        các kí tự đặc biệt và dấu cách (VD: @,#,_,...)</small>
+                              </div>
+                              <div class="from-group">
+                                   <div class="input-group">
+                                        <div class="input-group-prepend">
+                                             <div class="input-group-text">
+                                                  <i class="fa fa-user"></i>
+                                             </div>
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                             placeholder="E-mail" />
+                                   </div>
+                              </div>
+                              <br />
+                              <div class="form-group">
+                                   <div class="input-group">
+                                        <div class="input-group-prepend">
+                                             <div class="input-group-text">
+                                                  <i class="fa fa-lock"></i>
+                                             </div>
+                                        </div>
+                                        <input type="password" class="form-control" id="inlineFormInputGroupUsername"
+                                             placeholder="Mật khẩu" />
+                                   </div>
+                                   <small class="form-text text-muted err-valid"><i class="fas fa-times"></i> Mật khẩu
+                                        phải có tối thiểu 6 kí
+                                        tự và không trùng với tên đăng nhập</small>
+                              </div>
+                              <div class="form-group">
+                                   <div class="input-group">
+                                        <div class="input-group-prepend">
+                                             <div class="input-group-text">
+                                                  <i class="fa fa-lock"></i>
+                                             </div>
+                                        </div>
+                                        <input type="password" class="form-control" id="inlineFormInputGroupUsername"
+                                             placeholder="Nhập lại mật khẩu" />
+                                   </div>
+                                   <small class="form-text text-muted ok-valid"><i class="fas fa-check"></i> Okay !</small>
+                              </div>
+                              <div class="confirm-auth">
+                                   <input type="checkbox" name="authen" />
+                                   Tôi đồng ý với
+                                   <a href="#" style="color:green;font-style: italic;">điều khoản</a>
+                                   sử dụng.
+                              </div>
+                         </form>
+                    </div>
+                    <div class="modal-footer">
+                         <button type="submit" class="btn submit-logIn ">Đăng kí</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="header-main sticky">
+          <div class="">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-md-2 logo">
+                              <a href="index.html"><img src="image/logo-white.png" alt="" width="120px;" height="auto;" /></a>
+                         </div>
+                         <div class="col-md-7">
+                              <form class="form-search" action="#">
+                                   <input type="text" placeholder="Tìm kiếm sản phẩm" name="search" />
+                                   <button type="submit"><i class="fa fa-search"></i></button>
+                              </form>
+                         </div>
+                         <div class="col-md-3">
+                              <div class="container">
+                                   <div class="row">
+                                        <div class="col-sm-4">
+                                             <a href=""><i class="fa fa-shopping-cart" style="font-size: 300%;"></i></a>
+                                        </div>
+                                        <div class="col-sm-8">
+                                             <div class="">
+                                                  <div class="dropdown">
+                                                       <div class="post-new">
+                                                            Đăng Tin
+                                                       </div>
+                                                       <div class="dropdown-content">
+                                                            <a href="#">Thuê 1 đồ</a>
+                                                            <a href="#">Thuê nhiều đồ</a>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="header-button">
+          <div class="container">
+               <div class="row">
+                    <div class="col-sm">
+                         <i class="fas fa-torah icon-format"></i> Tin Cần Thuê
+                    </div>
+                    <div class="col-sm">
+                         <i class="fab fa-wpforms icon-format"></i> Diễn đàn chia sẻ
+                    </div>
+                    <div class="col-sm">
+                         <i class="fas fa-question-circle icon-format"></i> Hỗ trợ - giải đáp
+                    </div>
+                    <div class="col-sm">
+                         <i class="fas fa-question-circle icon-format"></i>Hội nhập
+                    </div>
+                    <div class="col-sm">
+                         <i class="fas fa-comment-dollar    "></i>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+   <!-- Background -->
+     <div class="container struct">
+          <img src="./image/shareQA.jpg" alt="Cover QA Forum">
+     </div>
+
+   <!-- Search and Filter -->
+     <div class="container struct">
+          <input type="text" placeholder="Tìm gì cũng có" class="col-sm-4 form-control"/>
+     </div>
+
+   <!-- List of posts -->
+     <div class="container struct">
+          <div class="card text-left">
+            <img class="card-img-top" src="holder.js/100px180/" alt="">
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <p class="card-text">Body</p>
+            </div>
+          </div>
+     </div>
+
+
+
+     <footer class="w3-hide-large">
+          <div class="container">
+               <div class="row">
+                    <div class="col-3">
+                         <a href="index.html">
+                              <i class="fa fa-home"></i><br />
+                              <small>Trang chủ</small>
+                         </a>
+                    </div>
+                    <div class="col-3">
+                         <a href="#">
+                              <i class="fa fa-bars"></i><br />
+                              <small>Danh mục</small>
+                         </a>
+                    </div>
+                    <div class="col-3">
+                         <a href="checkout/cart.html">
+                              <i class="fas fa-pencil-alt"></i><br />
+                              <small>Đăng tin</small>
+                         </a>
+                    </div>
+                    <div class="col-3">
+                         <a href="user.html">
+                              <i class="fa fa-user-circle-o"></i><br />
+                              <small>Tài khoản</small>
+                         </a>
+                    </div>
+               </div>
+          </div>
+     </footer>
+
+     <div class="feedback dropleft">
+          <div class="feedback-button" title="Phản hồi & Góp ý" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">
+               <i class="fas fa-comments"></i>
+          </div>
+          <div class="dropdown-menu feedback-box">
+               <div class="feedback-title">Góp ý - báo lỗi về trang web.</div>
+               <hr />
+               <div class="feedback-input">
+                    <form>
+                         <div class="form-group">
+                              <label for="email">Email: </label><span class="err-icon"></span>
+                              <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                   aria-describedby="emailHelp" />
+                              <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ gửi phản hồi lại qua
+                                   e-mail bạn đăng kí sau khi
+                                   giải quyết.</small>
+                         </div>
+                         <div class="form-group">
+                              <label for="title">Tiêu đề:</label>
+                              <input type="email" class="form-control" id="title" placeholder="Tiêu đề" placeholder="Enter email" />
+                         </div>
+                         <div class="form-group">
+                              <label for="pictureExample">Ảnh minh họa</label>
+                              <input type="file" class="form-control-file" id="pictureExample" />
+                         </div>
+                         <div class="form-group">
+                              <label for="feedback-input">Nội dung phản hồi - góp ý: <span class="err-icon"></span></label>
+                              <textarea class="form-control" id="feedback-input" rows="3" placeholder="Add feedback here..."></textarea>
+                         </div>
+                         <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                    </form>
+               </div>
+          </div>
+     </div>
+
+     <div id="footer-1">
+          <div class="container">
+               <div class="row">
+                    <div class="col-sm">
+                         <h5>VỀ CHÚNG TÔI</h5>
+                         <a href="">
+                              <p>Trang chủ</p>
+                         </a>
+                         <a href="">
+                              <p>Giới thiệu</p>
+                         </a>
+                         <a href="">
+                              <p>Tin tức</p>
+                         </a>
+                         <a href="">
+                              <p>Liên hệ</p>
+                         </a>
+                    </div>
+                    <div class="col-sm">
+                         <h5>QUY ĐỊNH VÀ CHÍNH SÁCH</h5>
+                         <a href="">
+                              <p>Quy chế hoạt động</p>
+                         </a>
+                         <a href="">
+                              <p>Quy định đăng tin</p>
+                         </a>
+                         <a href="">
+                              <p>Điều khoản sử dụng</p>
+                         </a>
+                         <a href="">
+                              <p>Chính sách bảo mật</p>
+                         </a>
+                    </div>
+                    <div class="col-sm">
+                         <h5>HỖ TRỢ KHÁCH HÀNG</h5>
+                         <a href="">
+                              <p>Quy trình giao dịch</p>
+                         </a>
+                         <a href="">
+                              <p>Hướng dẫn tìm kiếm</p>
+                         </a>
+                         <a href="">
+                              <p>Hướng dẫn đăng tin và quản lý tin</p>
+                         </a>
+                         <a href="">
+                              <p>Hướng dẫn up tin và up tin tự động</p>
+                         </a>
+                    </div>
+                    <div class="col-sm">
+                         <h5>LIÊN KẾT</h5>
+                         <a href="">
+                              <p><i class="fa fa-facebook-square"></i> Facebook</p>
+                         </a>
+                         <a href="">
+                              <p><i class="fa fa-google-plus-square"></i> Google+</p>
+                         </a>
+                         <a href="">
+                              <p><i class="fa fa-twitter-square"></i> Twitter</p>
+                         </a>
+                         <a href="">
+                              <p><i class="fa fa-instagram"></i> Instagram</p>
+                         </a>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div id="footer-2">
+          <div class="container">
+               <p>© 2018 - Bản quyền của Vido.vn</p>
+          </div>
+     </div>
+
+     <script type="text/javascript" src="js/main.js"></script>
+
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

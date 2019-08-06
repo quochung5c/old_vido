@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/list.css">
+  <title>Trang Chủ</title>
+  <style media="screen">
+    input {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col" style="text-align: left;">
+          <a href="" style="padding-right: 20px;">
+            <i class="fa fa-phone"></i>
+            097 347 1728
+          </a>
+          <a href="">
+            <i class="fa fa-envelope"></i>
+            tdo@gmail.com
+          </a>
+        </div>
+        <div class="col" style="text-align: right;">
+          <a href="" class="tdo-login" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-sign-in"></i>
+            Đăng Nhập
+          </a>
+          <a href="" style="padding-left: 20px;" class="tdo-regis" data-toggle="modal" data-target="#registerModal">
+            <i class="fa fa-user-plus"></i>
+            Đăng Ký
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Form đăng nhập -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Đăng nhập tài khoản</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form method="GET">
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                  <i class="fa fa-user"></i>
+                              </div>
+                          </div>
+                          <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                              placeholder="Tên tài khoản">
+                      </div>
+                      <br>
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                  <i class="fa fa-lock"></i>
+                              </div>
+                          </div>
+                          <input type="password" class="form-control" id="inlineFormInputGroupUsername"
+                              placeholder="Mật khẩu">
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn submit-logIn">Đăng nhập</button>
+              </div>
+              <div class="media-login">
+                  <p class="center-pt">Hoặc đăng nhập với</p>
+                  <div class="btn-group">
+                      <a class="btn btn-primary btn-item" href="#">
+                          <i class="fa fa-facebook-square"></i> Facebook</a>
+                      <a class="btn btn-danger btn-item" href="#">
+                          <i class="fa fa-envelope"></i> Gmail</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Hết form đăng nhập -->
+
+  <!-- Form đăng ký -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="registerModal">Đăng kí tài khoản</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="media-login">
+                      <p class="center-pt">Có thể đăng kí với:</p>
+                      <div class="btn-group">
+                          <a class="btn btn-primary btn-item" href="#">
+                              <i class="fa fa-facebook-square"></i> Facebook</a>
+                          <a class="btn btn-danger btn-item" href="#">
+                              <i class="fa fa-envelope"></i> Gmail</a>
+                      </div>
+                  </div>
+                  <form method="GET">
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                  <i class="fa fa-user"></i>
+                              </div>
+                          </div>
+                          <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                              placeholder="Tên tài khoản">
+                      </div>
+                      <br>
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                  <i class="fa fa-user"></i>
+                              </div>
+                          </div>
+                          <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                              placeholder="E-mail">
+                      </div>
+                      <br>
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                  <i class="fa fa-lock"></i>
+                              </div>
+                          </div>
+                          <input type="password" class="form-control" id="inlineFormInputGroupUsername"
+                              placeholder="Mật khẩu">
+                      </div>
+                      <br>
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <div class="input-group-text">
+                                  <i class="fa fa-lock"></i>
+                              </div>
+                          </div>
+                          <input type="password" class="form-control" id="inlineFormInputGroupUsername"
+                              placeholder="Nhập lại mật khẩu">
+                      </div>
+                      <br>
+                      <div class="confirm-auth">
+                          <input type="checkbox" name="authen">
+                          Tôi đồng ý với <a href="#" style="color:green;font-style: italic;">điều
+                              khoản</a> sử dụng.
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn submit-logIn ">Đăng kí</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="header-main sticky">
+    <div class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <a href="index.html"><img src="image/logo-white.png" alt="" width="120px;" height="auto;"></a>
+          </div>
+          <div class="col-md-7">
+            <form class="form-search" action="#">
+              <input type="text" placeholder="Tìm kiếm sản phẩm" name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="col-md-3">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href=""><i class="fa fa-shopping-cart" style="font-size: 300%;"></i></a>
+                </div>
+                <div class="col-sm-8">
+                  <a href="#">
+                    <div class="">
+                      <div class="dropdown">
+                        <div class="post-new">
+                          Đăng Tin
+                        </div>
+                        <div class="dropdown-content">
+                          <a href="#">Thuê đồ</a>
+                          <a href="#">Bán đồ</a>
+                          <a href="#">Tin cần đồ</a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="header-button">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="dropdown">
+            &ensp;Danh Mục &ensp;
+            <i class="fa fa-caret-down"></i>
+            <div class="dropdown-content">
+              <a href="#">Máy ảnh</a>
+              <a href="#">Xe máy</a>
+              <a href="#">Đồ phượt</a>
+              <a href="#">Đàn guitar</a>
+              <a href="#">Sách</a>
+              <a href="#">Trang phục</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          Tin Cần Thuê
+        </div>
+        <div class="col-sm">
+          Mã Giảm Giá
+        </div>
+        <div class="col-sm">
+          Nạp Thẻ
+        </div>
+        <div class="col-sm">
+
+        </div>
+        <div class="col-sm">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb container">
+          <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="#">Danh mục sản phẩm</a></li>
+          <li class="breadcrumb-item" aria-current="page">Sách</li>
+      </ol>
+  </nav>
+
+
+<div class="container" id="list-main">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="img-icon">
+        <img src="image/books.svg" alt="">
+        <p>Sách</p>
+      </div>
+      <div class="bo-loc-doc">
+        <h5>DANH MỤC SẢN PHẨM</h5>
+        <ul>
+          <p>Sách</p>
+          <li>
+            <a href="">
+              <p>Sách văn học</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>Sách kinh tế</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>Sách kỹ năng sống</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>Sách giáo khoa</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>Truyện tranh, Manga, Comic</p>
+            </a>
+          </li>
+        </ul>
+        <hr>
+        <h5>GIÁ</h5>
+        <form action="#" method="get">
+          <div class="""slidecontainer">
+          <input type="range" min="0" max="1000000" value="1000000" class="slider" id="myRange">
+          <p><span>0</span><span style="float: right;" id="demo"></span>đ</p>
+        </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="col-md-9 hien-san-pham">
+      <div class="bo-loc-ngang">
+        <div class="row">
+          <div class="col-2">
+            <div class="styled-select blue semi-square">
+              <select>
+                <option>Sản phẩm</option>
+                <option>Giá thấp</option>
+                <option>Giá cao</option>
+                <option>Giảm giá nhiều</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="styled-select blue semi-square">
+              <select>
+                <option>Địa điểm</option>
+                <option>Giá thấp</option>
+                <option>Giá cao</option>
+                <option>Giảm giá nhiều</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="styled-select blue semi-square">
+              <select>
+                <option>Hình thức</option>
+                <option>Giá thấp</option>
+                <option>Giá cao</option>
+                <option>Giảm giá nhiều</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="styled-select blue semi-square">
+              <select>
+                <option>Thời gian</option>
+                <option>Giá thấp</option>
+                <option>Giá cao</option>
+                <option>Giảm giá nhiều</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="styled-select blue semi-square">
+              <select>
+                <option>Giá</option>
+                <option>Giá thấp</option>
+                <option>Giá cao</option>
+                <option>Giảm giá nhiều</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w3-row">
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/9-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/11.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/13.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+            <img src="image/products/15-1.jpg" style="width:100%">
+            <p id="title-product">
+              Áo Thun Dài Tay Nam Kẻ Xọc
+            </p>
+            <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+            <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+            <p style="font-size: 90%;"><i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống Đa, Hà Nội
+            </p>
+            <br>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div  id="footer-1">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h5>VỀ CHÚNG TÔI</h5>
+      <a href=""><p>Trang chủ</p></a>
+      <a href=""><p>Giới thiệu</p></a>
+      <a href=""><p>Tin tức</p></a>
+      <a href=""><p>Liên hệ</p></a>
+    </div>
+    <div class="col-sm">
+      <h5>QUY ĐỊNH VÀ CHÍNH SÁCH</h5>
+      <a href=""><p>Quy chế hoạt động</p></a>
+      <a href=""><p>Quy định đăng tin</p></a>
+      <a href=""><p>Điều khoản sử dụng</p></a>
+      <a href=""><p>Chính sách bảo mật</p></a>
+    </div>
+    <div class="col-sm">
+      <h5>HỖ TRỢ KHÁCH HÀNG</h5>
+      <a href=""><p>Quy trình giao dịch</p></a>
+      <a href=""><p>Hướng dẫn tìm kiếm</p></a>
+      <a href=""><p>Hướng dẫn đăng tin và quản lý tin</p></a>
+      <a href=""><p>Hướng dẫn up tin và up tin tự động</p></a>
+    </div>
+    <div class="col-sm">
+      <h5>LIÊN KẾT</h5>
+      <a href=""><p><i class="fa fa-facebook-square"></i> Facebook</p></a>
+      <a href=""><p><i class="fa fa-google-plus-square"></i> Google+</p></a>
+      <a href=""><p><i class="fa fa-twitter-square"></i> Twitter</p></a>
+      <a href=""><p><i class="fa fa-instagram"></i> Instagram</p></a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div id="footer-2">
+  <div class="container">
+    <p>© 2018 - Bản quyền của Vido.vn</p>
+  </div>
+</div>
+
+
+  <script type="text/javascript" src="js/list.js">
+  </script>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

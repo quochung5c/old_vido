@@ -1,0 +1,49 @@
+body {
+  background-color: #F4F4F4;
+}
+
+#edit {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#edit a {
+  color: #000;
+}
+
+#edit .doc  {
+  font-size: 120%;
+  font-weight: 600;
+}
+
+#edit .doc i {
+  font-size: 150%;
+  color: #858585;
+  padding: 10px;
+}
+
+#edit .doc .background-doc {
+  background-color: #ECECEC;
+}
+
+#edit .ngang {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.activity-box {
+  padding-top: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.date-name {
+  font-style: italic;
+}
+.icon-activity {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 65px;
+}
+.title-activity {
+  font-weight: 500;
+}

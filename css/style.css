@@ -1,0 +1,824 @@
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.header-top {
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  background-color: #081e5f;
+  padding-top: 7px;
+}
+
+.header-top a,
+.header-main a {
+  color: #fff;
+}
+
+.header-main {
+  width: 100%;
+  height: 70px;
+  background-color: #0c3573;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.header-button {
+  width: 100%;
+  color: #fff;
+  background-color: #0c3573;
+  padding: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid #a6a6a6;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+form.form-search input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 86%;
+  background: #fff;
+  border-radius: 8px 0px 0px 8px;
+}
+
+form.form-search button {
+  float: left;
+  width: 14%;
+  padding: 10px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0px 8px 8px 0px;
+}
+
+form.form-search button:hover {
+  background: #0b7dda;
+}
+
+form.form-search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.post-new {
+  width: 120px;
+  height: 46px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+  border: 2px solid darkblue;
+  border-radius: 8px;
+  background-color: #dae5f0;
+  padding: 8px;
+  padding-left: 23px;
+}
+
+/* Create two equal columns that floats next to each other */
+
+.column-1 {
+  float: left;
+  width: 70%;
+  padding: 4px;
+}
+
+.column-2 {
+  float: left;
+  width: 30%;
+  padding: 4px;
+}
+
+.column-1 img,
+.column-2 img {
+  margin-top: 4px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mySlides {
+  display: none;
+}
+
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+}
+
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
+
+div#menu-icon div {
+  padding-top: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #397cce;
+}
+
+div#menu-icon div:hover {
+  -moz-box-shadow: 0 0 10px #bcbcbc;
+  -webkit-box-shadow: 0 0 10px #bcbcbc;
+  box-shadow: 0 0 15px #bcbcbc;
+  cursor: pointer;
+  border: none;
+}
+
+div#menu-icon img {
+  margin-bottom: 15px;
+  width: 40%;
+  height: auto;
+}
+
+.item {
+  color: #1f497d;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.item a {
+  color: #1f497d;
+  text-decoration: none;
+}
+
+div#product:hover {
+  -moz-box-shadow: 0 0 10px #bcbcbc;
+  -webkit-box-shadow: 0 0 10px #bcbcbc;
+  box-shadow: 0 0 15px #bcbcbc;
+  cursor: pointer;
+}
+
+div#product p {
+  margin-bottom: -0.5px;
+}
+
+div#product p#title-product {
+  white-space: nowrap; /*dùng để ép chữ hiển thị chỉ trên 1 hàng, không xuống hàng*/
+  overflow: hidden; /*để làm mất phần chữ bị tràn ra*/
+  text-overflow: ellipsis; /*thêm dấu 3 chấm vào phần chữ bị mất*/
+  padding-top: 10px;
+  font-size: 98%;
+  color: #0b7dda;
+}
+
+footer {
+  background: #fff;
+  padding: 8px;
+  width: 100%;
+  border-top: 1px solid #423d3e;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+footer p {
+  color: #0b7dda;
+  font-size: 1em;
+}
+footer a {
+  color: #1f497d;
+}
+
+footer a:hover {
+  color: #1f497d;
+}
+
+footer small {
+  font-size: 65%;
+}
+
+div#footer-1 {
+  background-color: #535353;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+div#footer-1 h5 {
+  color: #f4a448;
+  font-size: 110%;
+}
+
+div#footer-1 p {
+  color: #cecece;
+}
+
+div#footer-1 p:hover {
+  color: #fff;
+}
+
+div#footer-1 i {
+  font-size: 150%;
+}
+
+div#footer-2 {
+  height: 60px;
+  background-color: #2e2e2e;
+}
+
+div#footer-2 p {
+  padding-top: 18px;
+  color: #fff;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+.icon-format {
+  margin-right: 5px;
+}
+.radio-checkmark {
+  border-radius: 50%;
+}
+.flexy {
+  display: flex;
+}
+/* Comment */
+.avatar-icon {
+  width: 60px;
+  height: 60px;
+}
+.avatar-icon-v2 {
+  width: 48px;
+  height: 48px;
+}
+.insert-box {
+  padding: 0;
+}
+.appear-submit {
+  background: #f5f6f7;
+  padding: 8px;
+  justify-content: space-between;
+  display: none;
+}
+.publicOnFacebook {
+  color: grey;
+  font-size: 12px;
+  padding-top: 3px;
+}
+.submitComment {
+  font-size: 12px;
+  font-weight: 600;
+}
+.affect-appear-submit:focus ~ .appear-submit {
+  display: flex;
+}
+.comment-list {
+  padding: 10px;
+}
+.location-icon {
+  color: dodgerblue;
+  font-size: 13px;
+}
+.usr-info {
+  color: #8c8a8a;
+}
+.vote-comment {
+  justify-content: flex-start;
+  font-size: 12px;
+  display: flex;
+}
+.vote {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.love-comment {
+  color: red;
+}
+.report-comment {
+  color: green;
+}
+.reply-comment-box {
+  margin-left: 15px;
+  margin-top: 10px;
+  border-left: 2px solid lightgrey;
+}
+.usr-cmt {
+  color: #081e5f;
+  cursor: default;
+}
+.reply {
+  margin-bottom: 15px;
+}
+.rating {
+  color: gold;
+  font-size: 13px;
+}
+.rating-info {
+  color: #535353;
+}
+.love-item {
+  font-size: 16px !important;
+  color: white;
+}
+.love-toggle {
+  padding: 10px 20px;
+  color: white;
+  background: red;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.share-toggle {
+  padding: 10px 20px;
+  color: white;
+  background: darkblue;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.love-toggle:hover {
+  background: white;
+  color: red;
+  border: 1px solid red;
+}
+.love-toggle:hover .love-item {
+  color: red;
+}
+.share-toggle:hover {
+  background: white;
+  color: darkblue;
+  border: 1px solid darkblue;
+}
+.share-toggle:hover .love-item {
+  color: darkblue;
+}
+.compare-toggle {
+  color: green;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* User interface */
+.user-item-slot {
+  position: relative;
+}
+.menu-user-option {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.header-user-option {
+  bottom: 0;
+  right: 0;
+}
+.icon-menu-user {
+  width: 25px;
+}
+.dropdown-item {
+  padding: 10px;
+}
+.dropdown-item:hover {
+  background: whitesmoke;
+  color: darkblue;
+}
+.graph {
+  width: 820px;
+}
+.excel-export {
+  padding: 10px;
+  background-color: #0d6000;
+  color: white;
+  font-weight: 600;
+}
+.add-item:hover {
+  background-color: rgb(7, 111, 160);
+}
+
+.add-item {
+  padding: 10px;
+  background-color: dodgerblue;
+  color: white;
+  font-weight: 600;
+  border-radius: 15px;
+}
+.add-item,
+.excel-export {
+  margin-right: 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.see-more-graph {
+  font-weight: 600;
+  color: green;
+  padding: 10px;
+  cursor: default;
+}
+.product-history-title {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: -20px;
+}
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+.header-user-management {
+  padding: 10px;
+}
+.user-option-list {
+  color: darkblue;
+  font-size: 30px;
+}
+.user-option-list i {
+  margin-right: 10px;
+}
+/* Header User Option */
+.icon-header-user {
+  width: 25px;
+  border-radius: 50%;
+}
+.name-dropdown {
+  font-weight: 700;
+  cursor: default;
+}
+.user-option-item {
+  color: black !important;
+}
+.header-user-option {
+  left: 100%;
+}
+.header-user-item {
+  color: black !important;
+  font-size: 14px;
+  padding: 6px;
+}
+.vd {
+  color: #081e5f;
+}
+.user-interface-header {
+  display: flex;
+  justify-content: flex-end;
+}
+.newfeed {
+  font-size: 22px;
+  margin-right: 30px;
+  margin-top: -6px;
+  position: relative;
+}
+.newfeed-badge {
+  position: absolute;
+  font-size: 11px;
+  top: 1%;
+  left: 60%;
+  margin: 4px;
+}
+/* .hien-san-pham {
+  border-left: 1px solid gainsboro;
+} */
+.user-manage-option {
+  padding: 10px;
+  border: 1px solid gainsboro;
+  margin-top: 10px;
+}
+#user-profile-info {
+  border: 1px solid gainsboro !important;
+}
+.user-mg-item {
+  padding: 8px;
+}
+.user-mg-item:hover {
+   background: whitesmoke;
+   color: dodgerblue;
+   cursor: pointer;
+}
+.needHelp {
+  font-size: 13px;
+}
+/* Work in Progress Modal */
+.img-wip {
+  width: 250px;
+  margin-left: 80px;
+}
+.img-delete {
+  width: 200px;
+  margin-left: 30%;
+}
+.wip-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: red;
+  text-align: center;
+}
+.icon {
+  width: 30px;
+}
+.center-img {
+  position: relative;
+}
+.cat-msg {
+  padding: 20px;
+  border-radius: 50%;
+  top: 0;
+  right: 12%;
+  font-size: 15px;
+  margin-top: 20px;
+  font-weight: 300;
+  width: 150px;
+  text-align: center;
+  background: lightblue;
+  position: absolute;
+}
+.cat-msg {
+  padding: 20px;
+  border-radius: 50%;
+  top: 0;
+  font-size: 15px;
+  margin-top: 20px;
+  font-weight: 400;
+  text-align: center;
+  background: lightsteelblue;
+  position: absolute;
+  left: 4%;
+  width: 180px;
+}
+.product-name {
+  color: green;
+  font-weight: 700;
+}
+.ngang {
+  margin-top: 20px;
+
+}
+.product-history-title-ano {
+  width: 50%;
+  font-weight: 600;
+  font-size: 22px;
+}
+.search-for-ano {
+  width: 50%;
+}
+.activity {
+  padding: 10px;
+}
+
+.err-icon {
+  color: red;
+  font-weight: 600;
+  font-size: 15px !important;
+}
+
+/* Feedback Box */
+.feedback-button {
+  background-color: darkblue;
+  padding: 15px;
+  color: white;
+  border-radius: 30%;
+  font-size: 30px;
+
+}
+.feedback-box {
+  padding: 10px;
+  width: 350px;
+  margin-top: -100px !important;
+  z-index: 1;
+}
+.feedback {
+  position: fixed;
+  bottom: 40%;
+  right: 0;
+}
+.feedback-title {
+  font-weight: 600;
+
+}
+/* Chỉnh sửa thông tin sản phẩm */
+.fix-item-content {
+  width: 180%;
+  right: 25%;
+}
+.fix-item-body {
+  max-height: 400px;
+  overflow: auto;
+}
+.fix-item-header {
+  border: none;
+}
+.tab-link {
+  color: #268bb9;
+  font-weight: 600;
+}
+.newfeed-box {
+  margin-left: -100px;
+  width: 350px;
+  min-height: 20;
+}
+.newfeed-list {
+  max-height: 500px;
+  overflow: auto;
+}
+.dropdown-slot {
+  padding: 10px;
+  border-bottom: 1px solid gainsboro;
+}
+.dropdown-slot:hover {
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+.newfeed-content {
+  color: BLACK;
+  font-size: 14px;
+}
+.newfeed-avatar {
+  margin-right: 10px;
+}
+.newfeed-icon {
+  width: 50px;
+  border-radius: 30px;
+}
+.newfeed-time {
+ font-style: italic;
+ font-size: 13px;
+ margin-top: 4px;
+}
+.not-seen {
+  background-color: rgba(224, 236, 255, .5);
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.dropdown-slot-sub {
+  padding: 4px;
+  justify-content: space-between;
+  font-size: 12px;
+  font-style: italic;
+  border-bottom: 1px solid gainsboro;
+}
+.blind-item {
+  position: absolute;
+  top: 0;
+  right: 1%;
+  font-size: 20px;
+  color: gray;
+}
+.product-tab {
+  font-size: 16px;
+  color: darkblue;
+  font-weight: 500;
+}
+.err-valid {
+  color: red !important;
+}
+.ok-valid {
+  color: green !important;
+}
+#not-for-book, #for-book {
+  display: none;
+}
+.continue {
+  float: right;
+  color: green;
+  font-weight: 600;
+  cursor: pointer;
+}
+/* Thanh danh mục sản phẩm */
+@media only screen and (max-width: 399px) {
+  .category-desktop {
+    display: none;
+  }
+  .category-mobile {
+    display: block !important;
+  }
+  .icon-res {
+    width: 35px;
+  }
+  .item-res {
+    color: #1f497d;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 20px;
+    font-size: 15px;
+    background-color: #e2edff;
+    border: 1px solid gainsboro;
+  }
+  .cate-title-res {
+    color: #081e5f;
+    margin-left: 20px;
+  }
+  .special-category {
+    width: 96%;
+  }
+  .feedback-button {
+    padding: 10px;
+    font-size: 15px;
+
+  }
+}
+
+.category-mobile {
+  display: none;
+}
+/* Nút báo cáo */
+.report-post {
+  padding: 10px;
+  font-weight: 600;
+  color: red;
+  cursor: default;
+}
+.img-format {
+  margin-right: 4px;
+}
+.custom-control-label {
+  font-weight: 400 !important;
+}
+.submit-complete {
+  background-color: green;
+  color: white;
+  padding: 10px;
+}
+.submit-complete:hover {
+  color: white;
+  
+}
+.explaination {
+  margin-top: 8px;
+}
+
+/* QA Forum */
+.cover-qa {
+  margin-top: 10px;
+}
+.struct {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#search-icon {
+  position: absolute;
+}

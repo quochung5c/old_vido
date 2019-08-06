@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/chi-tiet.css" />
+
+  <title>SẢN PHẨM GÌ ĐÓ CỦA TÔI </title>
+  <style media="screen">
+    input {
+        color: #000;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col" style="text-align: left;">
+          <a href="" style="padding-right: 20px;">
+            <i class="fa fa-phone"></i> 097 347 1728
+          </a>
+          <a href=""> <i class="fa fa-envelope"></i> tdo@gmail.com </a>
+        </div>
+        <div class="col" style="text-align: right;">
+          <div class="menu-user-option">
+            <div class="dropdown name-dropdown">
+              <div class="dropdown-toggle" id="userDropdownOption" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <img src="image/me.png" class="icon-header-user"> Nguyễn Quốc Hùng
+              </div>
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item header-user-item" href="#">
+                  <i class="fas fa-user icon-format vd"></i> Quản lí gian hàng</a>
+                <a class="dropdown-item header-user-item" href="#">
+                  <i class="fas fa-poll-h icon-format vd"></i> Nhật kí hoạt động</a>
+                <a class="dropdown-item header-user-item" href="#">
+                  <i class="fas fa-wrench icon-format vd"></i> Cập nhật thông tin </a>
+                <hr>
+                <a class="dropdown-item header-user-item" href="#">Hướng dẫn sử dụng Vido </a>
+                <a class="dropdown-item header-user-item" href="#">
+                  <i class="fas fa-sign-out-alt vd"></i> Đăng xuất</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form đăng nhập -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Đăng nhập tài khoản
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="GET">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-user"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Tên tài khoản" />
+            </div>
+            <br />
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-lock"></i></div>
+              </div>
+              <input type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Mật khẩu" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn submit-logIn">Đăng nhập</button>
+        </div>
+        <div class="media-login">
+          <p class="center-pt">Hoặc đăng nhập với</p>
+          <div class="btn-group">
+            <a class="btn btn-primary btn-item" href="#">
+              <i class="fa fa-facebook-square"></i> Facebook</a>
+            <a class="btn btn-danger btn-item" href="#">
+              <i class="fa fa-envelope"></i> Gmail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hết form đăng nhập -->
+
+  <!-- Form đăng ký -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModal">Đăng ký tài khoản</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="media-login">
+            <p class="center-pt">Có thể đăng ký với:</p>
+            <div class="btn-group">
+              <a class="btn btn-primary btn-item" href="#">
+                <i class="fa fa-facebook-square"></i> Facebook</a>
+              <a class="btn btn-danger btn-item" href="#">
+                <i class="fa fa-envelope"></i> Gmail</a>
+            </div>
+          </div>
+          <form method="GET">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-user"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Tên tài khoản" />
+            </div>
+            <br />
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-user"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="E-mail" />
+            </div>
+            <br />
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-lock"></i></div>
+              </div>
+              <input type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Mật khẩu" />
+            </div>
+            <br />
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-lock"></i></div>
+              </div>
+              <input type="password" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nhập lại mật khẩu" />
+            </div>
+            <br />
+            <div class="confirm-auth">
+              <input type="checkbox" name="authen" /> Tôi đồng ý với
+              <a href="#" style="color:green;font-style: italic;">điều khoản</a>
+              sử dụng.
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn submit-logIn ">Đăng ký</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-main sticky">
+    <div class="">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <a href="index.html"><img src="image/logo-white.png" alt="" width="120px;" height="auto;" /></a>
+          </div>
+          <div class="col-md-7">
+            <form class="form-search" action="#">
+              <input type="text" placeholder="Tìm kiếm sản phẩm" name="search" />
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <div class="col-md-3">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4">
+                  <a href=""><i class="fa fa-shopping-cart" style="font-size: 300%;"></i></a>
+                </div>
+                <div class="col-sm-8">
+                  <a href="#">
+                    <div class="">
+                      <div class="dropdown">
+                        <div class="post-new">Đăng Tin</div>
+                        <div class="dropdown-content">
+                          <a href="#">Thuê đồ</a> <a href="#">Bán đồ</a>
+                          <a href="#">Tin cần đồ</a>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-button">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="dropdown">
+            <i class="fas fa-bars"></i>
+            &ensp;Danh Mục &ensp;
+            <div class="dropdown-content">
+              <a href="#">Máy ảnh</a> <a href="#">Xe máy</a>
+              <a href="#">Đồ phượt</a> <a href="#">Đàn guitar</a>
+              <a href="#">Sách</a> <a href="#">Trang phục</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <i class="fas fa-torah icon-format"></i> Tin Cần Thuê
+        </div>
+        <div class="col-sm">
+          <i class="fas fa-ticket-alt icon-format"></i> Mã Giảm Giá
+        </div>
+        <div class="col-sm">
+          <i class="far fa-credit-card icon-format"></i> Nạp Thẻ
+        </div>
+        <div class="col-sm">
+          <i class="fab fa-wpforms icon-format"></i> Diễn đàn chia sẻ
+        </div>
+        <div class="col-sm">
+          <i class="fas fa-question-circle icon-format"></i> Hỗ trợ - giải đáp
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Phần hiển thị thông tin cơ bản -->
+  <div class="container" id="thong-tin-san-pham" style="margin-top: 50px;">
+    <div class="row">
+      <div class="col-md-4" id="img">
+        <div class="mySlides">
+          <img src="image/chi-tiet/dong-ho.jpg" style="width:100%" />
+        </div>
+        <div class="mySlides">
+          <img src="image/chi-tiet/dong-ho-1.jpg" style="width:100%" />
+        </div>
+
+        <div class="row">
+          <div class="column">
+            <img class="cursor" src="image/chi-tiet/dong-ho-small.jpg" style="width:100%" onclick="currentSlide(1)" />
+          </div>
+          <div class="column">
+            <img class="cursor" src="image/chi-tiet/dong-ho-1-small.jpg" style="width:100%" onclick="currentSlide(2)" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8" id="thong-tin-co-ban">
+        <div class="col-12 name">
+          <h4>
+            Đồng Hồ Thời Trang Nam Cariano CAR001 (34mm) - Vàng (Tặng Kèm Dây
+            Da)
+          </h4>
+          <div class="rating-slot flexy">
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half"></i>
+            </div>
+            <div class="rating-info"> (21 đánh giá) </div>
+          </div>
+
+          <p class="hiring-user">
+            Người cho thuê:
+            <span style="color: #0B7DDA;">
+              <a href="#"> Đặng Phương Nam </a>
+            </span>
+          </p>
+          <hr />
+        </div>
+        <div class="">
+          <div class="row">
+            <div class="col-8">
+              <div class="col-12">
+                <div class="price">
+                  <p>Giá mua: <span> 890.000 đ </span></p>
+
+                  <p>Tiết kiệm: <span> 73% </span> (2.390.000 đ)</p>
+
+                  <p>Giá thị trường: 3.280.000 đ</p>
+
+                  <hr />
+
+                  <p>Giá thuê: <span> 20.000 đ/ngày </span></p>
+                  <p>Đặt cọc: CMTND, Thẻ sinh viên, GPLX</p>
+                  <p>Địa điểm: 155 Nguyễn Khang, Cầu Giấy, Hà Nội</p>
+                  <p>Liên hệ: <span> 0987654321 </span></p>
+
+                  <hr />
+                  <div class="col-12">
+                    <div class="container">
+                      <div class="row">
+                        <!-- Khi nào bấm yêu thích thì gửi request về server, đc thì thay thuộc tính nút Yêu thích giống như lúc hover -->
+                        <div class="love-toggle">
+                          <span class="glyphicon glyphicon-heart-empty love-item img-format" title="Thêm Vào Yêu Thích"></span>
+                          Yêu thích (5)
+                        </div>
+                        <div class="share-toggle" onclick="shareButton()">
+                          <span class="fab fa-facebook-f love-item img-format" title="Chia sẻ bài viết"></span>
+                          Chia sẻ
+                        </div>
+                        <div class="report-post" data-toggle="modal" data-target="#report">
+                          <i class="fas fa-flag img-format"></i> Báo cáo </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4" id="form-thong-tin-phu">
+              <div class="col-11" id="thong-tin">
+                <p>hh</p>
+                <p>Liên hệ với chủ cửa hàng trước khi mua đồ</p>
+                <p>sdfsdfsdfsd</p>
+                <p>sdfsdfsdfsd</p>
+                <p>sdfsdfsdfsd</p>
+                <p>sdfsdfsdfsd</p>
+              </div>
+              <div class="col-11" id="xem-kinh-nghiem-mua">
+                <p>Xem kinh nghiệm mua đồ cũ tại đây</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thông tin sản phẩm -->
+  <div class="container" id="thong-tin-san-pham">
+    <h5>THÔNG TIN SẢN PHẨM</h5>
+    <h6>Tình trạng sản phẩm:</h6>
+    <!-- PHP Here-->
+    <h6>Mô tả sản phẩm:</h6>
+    <!-- PHP Here-->
+  </div>
+
+  <!-- Bình luận sản phẩm -->
+  <div class="container" id="thong-tin-san-pham">
+    <h5>BÌNH LUẬN VỀ SẢN PHẨM</h5>
+    <div class="insert-comment flexy">
+      <div class="avatar col-1">
+        <img src="image/me.png" class="avatar-icon" />
+      </div>
+      <div class="insert-box col-11">
+        <form method="POST">
+          <textarea placeholder="Add a comment" class="form-control affect-appear-submit" rows="2"></textarea>
+          <div class="appear-submit flexy ">
+            <div class="publicOnFacebook">
+              <input type="checkbox" value="toFacebook" name="toFb" /> Đăng
+              lên Facebook
+            </div>
+            <div class="submitComment">
+              <button type="submit" class="btn btn-primary submitComment">
+                Post
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br />
+    <!-- Danh sách comment liệt kê dưới đây, 1 class comment gồm avatar, vùng đc insert. Trong vùng đc insert có tên, địa chỉ, nội dung, vote, reply-->
+    <div class="comment-list">
+      <div class="comment flexy">
+        <div class="avatar col-1">
+          <img src="image/me.png" class="avatar-icon-v2" />
+        </div>
+        <div class="insert-box col-11">
+          <div class="user-cmt-info">
+            <b class="usr-cmt">Nguyễn Quốc Hùng</b> -
+            <i class="fas fa-map-marker-alt location-icon"></i>
+            <span class="usr-info"> Quận Hà Đông , Hà Nội</span>
+          </div>
+          <div class="cmt-content">Tôi rất thích sản phẩm này</div>
+          <div class="vote-comment">
+            <div class="love-comment vote">
+              <i class="fas fa-heart"></i> 5 Yêu thích
+            </div>
+            .
+            <div class="reply-comment vote">1 Trả lời</div>
+            .
+            <div class="report-comment vote">
+              <i class="fas fa-flag"></i> Báo cáo
+            </div>
+          </div>
+          <div class="reply-comment-box">
+            <div class="comment-list flexy">
+              <div class="avatar col-1">
+                <img src="image/me.png" class="avatar-icon-v2" />
+              </div>
+              <div class="insert-box col-11">
+                <div class="user-cmt-info">
+                  <b class="usr-cmt">Đỗ Quang</b> -
+                  <i class="fas fa-map-marker-alt location-icon"></i>
+                  <span class="usr-info">
+                    Thị xã Hoài Đức, Quận Nam Từ Liêm, Hà Nội</span>
+                </div>
+                <div class="cmt-content">Tôi không nghĩ vậy</div>
+                <div class="vote-comment">
+                  <div class="love-comment vote">
+                    <i class="fas fa-heart"></i> Yêu thích
+                  </div>
+                  .
+                  <div class="report-comment vote">
+                    <i class="fas fa-flag"></i> Báo cáo
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="comment flexy">
+        <div class="avatar col-1">
+          <img src="image/me.png" class="avatar-icon-v2" />
+        </div>
+        <div class="insert-box col-11">
+          <div class="user-cmt-info">
+            <b class="usr-cmt">Nguyễn Quốc Hùng</b> -
+            <i class="fas fa-map-marker-alt location-icon"></i>
+            <span class="usr-info"> Quận Hà Đông , Hà Nội</span>
+          </div>
+          <div class="cmt-content">Tôi rất thích sản phẩm này</div>
+          <div class="vote-comment">
+            <div class="love-comment vote">
+              <i class="fas fa-heart"></i> 5 Yêu thích
+            </div>
+            .
+            <div class="reply-comment vote">1 Trả lời</div>
+            .
+            <div class="report-comment vote">
+              <i class="fas fa-flag"></i> Báo cáo
+            </div>
+          </div>
+          <div class="reply-comment-box">
+            <div class="comment-list">
+              <div class="reply flexy">
+                <div class="avatar col-1">
+                  <img src="image/me.png" class="avatar-icon-v2" />
+                </div>
+                <div class="insert-box col-11">
+                  <div class="user-cmt-info">
+                    <b class="usr-cmt">Phạm Hoàng Minh</b> -
+                    <i class="fas fa-map-marker-alt location-icon"></i>
+                    <span class="usr-info">
+                      Phường Phú Diễn, Quận Bắc Từ Liêm, Hà Nội</span>
+                  </div>
+                  <div class="cmt-content">Tôi không nghĩ vậy</div>
+                  <div class="vote-comment">
+                    <div class="love-comment vote">
+                      <i class="fas fa-heart"></i> Yêu thích
+                    </div>
+                    .
+                    <div class="report-comment vote">
+                      <i class="fas fa-flag"></i> Báo cáo
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reply flexy">
+                <div class="avatar col-1">
+                  <img src="image/me.png" class="avatar-icon-v2" />
+                </div>
+                <div class="insert-box col-11">
+                  <div class="user-cmt-info">
+                    <b class="usr-cmt">Phạm Hoàng Minh</b> -
+                    <i class="fas fa-map-marker-alt location-icon"></i>
+                    <span class="usr-info">
+                      Phường Phú Diễn, Quận Bắc Từ Liêm, Hà Nội</span>
+                  </div>
+                  <div class="cmt-content">Tôi không nghĩ vậy</div>
+                  <div class="vote-comment">
+                    <div class="love-comment vote">
+                      <i class="fas fa-heart"></i> Yêu thích
+                    </div>
+                    .
+                    <div class="report-comment vote">
+                      <i class="fas fa-flag"></i> Báo cáo
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sản phẩm cùng người bán -->
+  <div class="container" id="thong-tin-san-pham">
+    <h5>SẢN PHẨM CÙNG NGƯỜI BÁN</h5>
+    <!-- Gian hàng được quan tâm nhiều -->
+    <div class="container">
+      <div class="w3-main" style="background: #fff;">
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+        <!-- Product grid -->
+        <div class="w3-row">
+          <div class="w3-col l2 s6">
+            <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+              <img src="image/products/9-1.jpg" style="width:100%" />
+              <p id="title-product">Áo Thun Dài Tay Nam Kẻ Xọc</p>
+              <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+              <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+              <p style="font-size: 90%;">
+                <i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống
+                Đa, Hà Nội
+              </p>
+              <br />
+            </div>
+          </div>
+
+          <div class="w3-col l2 s6">
+            <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+              <img src="image/products/11.jpg" style="width:100%" />
+              <p id="title-product">Áo Thun Dài Tay Nam Kẻ Xọc</p>
+              <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+              <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+              <p style="font-size: 90%;">
+                <i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống
+                Đa, Hà Nội
+              </p>
+              <br />
+            </div>
+          </div>
+
+          <div class="w3-col l2 s6">
+            <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+              <img src="image/products/13.jpg" style="width:100%" />
+              <p id="title-product">Áo Thun Dài Tay Nam Kẻ Xọc</p>
+              <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+              <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+              <p style="font-size: 90%;">
+                <i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống
+                Đa, Hà Nội
+              </p>
+              <br />
+            </div>
+          </div>
+
+          <div class="w3-col l2 s6">
+            <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+              <img src="image/products/15-1.jpg" style="width:100%" />
+              <p id="title-product">Áo Thun Dài Tay Nam Kẻ Xọc</p>
+              <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+              <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+              <p style="font-size: 90%;">
+                <i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống
+                Đa, Hà Nội
+              </p>
+              <br />
+            </div>
+          </div>
+
+          <div class="w3-col l2 s6">
+            <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+              <img src="image/products/13.jpg" style="width:100%" />
+              <p id="title-product">Áo Thun Dài Tay Nam Kẻ Xọc</p>
+              <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+              <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+              <p style="font-size: 90%;">
+                <i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống
+                Đa, Hà Nội
+              </p>
+              <br />
+            </div>
+          </div>
+
+          <div class="w3-col l2 s6">
+            <div class="w3-container" id="product" title="Áo Thun Dài Tay Nam Kẻ Xọc">
+              <img src="image/products/15-1.jpg" style="width:100%" />
+              <p id="title-product">Áo Thun Dài Tay Nam Kẻ Xọc</p>
+              <p style="font-size: 100%;color: red;"><b>20.000đ/ngày</b></p>
+              <p style="font-size: 90%;">Đặt cọc: CMTND, Bằng lái</p>
+              <p style="font-size: 90%;">
+                <i class="fa fa-map-marker" style="color: #189EFF;"></i> Đống
+                Đa, Hà Nội
+              </p>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h5>VỀ CHÚNG TÔI</h5>
+          <a href="">
+            <p>Trang chủ</p>
+          </a>
+          <a href="">
+            <p>Giới thiệu</p>
+          </a> <a href="">
+            <p>Tin tức</p>
+          </a>
+          <a href="">
+            <p>Liên hệ</p>
+          </a>
+        </div>
+        <div class="col-sm">
+          <h5>QUY ĐỊNH VÀ CHÍNH SÁCH</h5>
+          <a href="">
+            <p>Quy chế hoạt động</p>
+          </a>
+          <a href="">
+            <p>Quy định đăng tin</p>
+          </a>
+          <a href="">
+            <p>Điều khoản sử dụng</p>
+          </a>
+          <a href="">
+            <p>Chính sách bảo mật</p>
+          </a>
+        </div>
+        <div class="col-sm">
+          <h5>HỖ TRỢ KHÁCH HÀNG</h5>
+          <a href="">
+            <p>Quy trình giao dịch</p>
+          </a>
+          <a href="">
+            <p>Hướng dẫn tìm kiếm</p>
+          </a>
+          <a href="">
+            <p>Hướng dẫn đăng tin và quản lý tin</p>
+          </a>
+          <a href="">
+            <p>Hướng dẫn up tin và up tin tự động</p>
+          </a>
+        </div>
+        <div class="col-sm">
+          <h5>LIÊN KẾT</h5>
+          <a href="">
+            <p><i class="fa fa-facebook-square"></i> Facebook</p>
+          </a>
+          <a href="">
+            <p><i class="fa fa-google-plus-square"></i> Google+</p>
+          </a>
+          <a href="">
+            <p><i class="fa fa-twitter-square"></i> Twitter</p>
+          </a>
+          <a href="">
+            <p><i class="fa fa-instagram"></i> Instagram</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-2">
+    <div class="container">
+      <p>© 2018 - Bản quyền của Vido.vn</p>
+    </div>
+  </div>
+  <div class="modal fade" id="report" tabindex="-1" role="dialog" aria-labelledby="reportPost" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reportPost">
+            Báo cáo sản phẩm
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="GET">
+            <label>Tại sao bạn báo cáo bài viết này?</label>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="lessInfo" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="lessInfo">Bài viết có nội dung sơ sài</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="noPicture" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="noPicture">Hình ảnh không phù hợp</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="priceIssue" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="priceIssue">Giá cả không hợp lý</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="userBadname" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="userBadname">Tên sản phẩm không phù hợp văn phong</label>
+            </div>
+            <div class="form-group explaination">
+              <label for="inputAddress">Giải thích: </label>
+              <textarea class="form-control" placeholder="Add explaination..."></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn submit-complete">Hoàn thành</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/chi-tiet.js"></script>
+  <script>
+    function shareButton() {
+      var x = document.URL;
+      var fbSample = 'https://www.facebook.com/sharer/sharer.php?u=';
+      console.log(x);
+      var share = fbSample.concat(x);
+      console.log(share);
+      window.open(share);
+    }
+  </script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

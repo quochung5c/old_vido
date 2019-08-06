@@ -1,0 +1,21 @@
+﻿29/11/2018:
+- Cập nhật phần "Chỉnh sửa sản phẩm" - user.html
+- Cập nhật phần chỉnh sửa thông tin", thêm ckeditor vào mô tả sản phẩm - dang-tin-cho-thue.html
+- Vẽ 1 icon nhận biết sản phẩm ẩn/hiện - user.html
+- Bỏ phần không sử dụng tới: biểu đồ, dữ liệu exel. - user.html
+- Thêm nút Thêm sản phẩm, từ giờ có thể đăng sản phẩm trên quản lí người dùng luôn - user.html
+- Sửa lại giao diện cho nút tab, tạo modal ẩn sản phẩm - user.html
+- Thêm tính năng thông báo, gồm các nội dung được gửi lên thông báo. 
+- Ở tab sản phẩm yêu thích, có thể chọn "Bỏ yêu thích" hoặc "Tới trang sản phẩm"
+- Chức năng feedback (viên tròn xanh ở bên phải web) - all 
+- Thêm validation đẹp hơn cho đăng kí.
+- Thêm 2 alert box cho đăng nhập/đăng kí khi bị lỗi (thông tin lỗi có thể sửa sau theo ý back-end) - index.html
+
+2/12/2018:
+- Thêm tính năng đăng nhiều sản phẩm cho danh mục sách.
+5/12/2018:
+- Thay mới thanh danh mục sản phẩm ở trên responsive - index.html
+- Thay icon mới cho nút Chia sẻ - chi-tiet.html
+- Làm 1 nút báo cáo, có kèm theo modal khi bấm - chi-tiet.html
+-
+

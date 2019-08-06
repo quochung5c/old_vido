@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+</head>
+
+<body>
+     <form onsubmit="onSub()">
+          <input type="text" placeholder="text here" name="name" id="value" />
+          <input type="submit" value="submit" />
+     </form>
+     <div id="history">
+
+     </div>
+     <script>
+          var new_suggest = window.localStorage.getItem('history').split(',');
+          console.log(new_suggest);
+
+          function onSub() {
+               var val = document.getElementById('value');
+               new_suggest.push(val.value);
+               window.localStorage.setItem('history', new_suggest);
+          }
+          // window.localStorage.setItem('history', new_suggest);
+          // Push new_suggest to localStorage
+
+          var res = document.getElementById('history');
+          var result = new_suggest.map((item) => {
+               return `<p>${item}</p>`;
+          })
+          res.innerHTML = result.join(' ')
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+/* Đăng tin cho thuê */
+.vido-main {
+  padding: 15px;
+}
+
+.vido-main-block {
+  margin-top: 20px;
+}
+
+.breadcrumb-item > a {
+  color: black;
+}
+
+.breadcrumb {
+  background: white;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  border-bottom: 1px solid #1e78a8;
+  padding: 8px;
+}
+
+.page-main-content {
+  padding: 10px;
+}
+
+.page-main-content {
+  margin: 30px 0;
+}
+
+.page-main-content-confirm {
+  padding: 20px;
+  text-align: center;
+  border: 1.5px solid green;
+  border-radius: 10px;
+}
+
+/* Category */
+.category-title {
+  font-size: 25px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  border-left: 3px solid #1e78a8;
+  color: #1e78a8;
+}
+
+.uploading-block,
+.basic-information-block,
+.specific-info-block {
+  margin: auto;
+}
+
+.block-label {
+  padding: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #062463;
+}
+
+
+
+#yourBtn{
+   position: relative;
+   width: 150px;
+   padding: 10px;
+   border-radius: 8px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   text-align: center;
+   color: #fff;
+   background-color: #0B7DDA;
+   cursor:pointer;
+  }

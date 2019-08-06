@@ -1,0 +1,326 @@
+body {
+  background-color: #F4F4F4;
+}
+
+a {
+  color: #787878;
+  font-size: 90%;
+}
+
+/* Icon danh mục */
+
+#list-main .img-icon {
+  background-color: #D8E4F1;
+  line-height: 100px;
+  white-space: nowrap;
+}
+
+#list-main .img-icon img {
+  padding-top: 50px;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+#list-main .img-icon p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 130%;
+}
+
+/* Bộ lọc dọc */
+
+#list-main {
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.bo-loc-doc {
+  display: block;
+}
+
+.bo-loc-doc h5 {
+  font-size: 98%;
+}
+
+.bo-loc-doc ul {
+  list-style-type: none;
+  padding: 0px;
+  font-weight: 700;
+}
+
+.bo-loc-doc li {
+  font-weight: 400;
+  padding-left: 10px;
+  line-height: 0.9;
+}
+
+/* Phần tăng giảm giá */
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #2196F3;
+    outline: none;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #0C3573;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+/* Slide ảnh */
+
+#slides {
+  position: relative;
+  height: 300px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+.controls {
+  display: none;
+}
+
+.slide {
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+  background-size: cover;
+}
+
+.slide:nth-of-type(1) {
+  background-image: url("../image/chi-tiet/bf.jpg");
+}
+
+.slide:nth-of-type(2) {
+  background-image: url("../image/chi-tiet/bf-1.jpg");
+}
+
+.slide:nth-of-type(3) {
+  background-image: url("../image/chi-tiet/bf-2.jpg");
+}
+
+.controls {
+  background: #F4F4F4;
+  color: #000;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 265px;
+  margin-left: 20px;
+  width: 30px;
+  border-radius: 8px;
+}
+
+.controls:hover, .controls:focus {
+  background: #0B7DDA;
+  color: #fff;
+  border-radius: 8px;
+  outline: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.buttons {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  font-size: 0px;
+  padding-left: 40%;
+}
+
+/* Bộ lọc ngang */
+
+.hien-san-pham .bo-loc-ngang {
+  height: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.styled-select {
+  height: 35px;
+  width: 140px;
+}
+
+.styled-select select {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  height: 29px;
+  padding-left: 10px;
+}
+
+.semi-square {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1.5px solid;
+}
+
+.blue {
+  background-color: #3b8ec2;
+} 
+
+.blue select {
+  color: #000;
+}
+
+/* Phần phân trang */
+
+.pagination {
+  display: inline-block;
+  float: right;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #2196F3;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #0B7DDA;
+  border-radius: 5px;
+}
+.filter-date {
+  border: none;
+  font-weight: 200;
+  margin-left: 10px;
+
+}
+
+
+
+.checkbox-slot {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-slot input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border: solid 1px;
+}
+
+.checkmark , .radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border: 1px solid;
+  margin-top: 5px;
+}
+
+.checkbox-slot input:checked ~ .checkmark, .checkbox-slot input:checked ~ .radio-checkmark   {
+  background-color: white;
+}
+
+.checkmark:after, .radio-checkmark:after  {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.checkbox-slot input:checked ~ .checkmark:after, .checkbox-slot input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+.checkbox-slot .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 3px;
+  height: 8px;
+  border: solid #3d80ed;
+  border-width: 0 1.5px 1.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+label {
+  font-weight: 400;
+}
+
+.checkbox-slot .radio-checkmark:after {
+  right: 2px;
+  top: 2.5px;
+  width: 3px;
+  height: 8px;
+  border: solid #3d80ed;
+  border-width: 0 8px 8px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 50%;
+  
+}

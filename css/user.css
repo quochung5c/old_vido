@@ -1,0 +1,207 @@
+#head-main {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#head-main p {
+  font-size: 110%;
+  color: #0C3573;
+  font-weight: 600;
+  padding-top: 8px;
+}
+
+#head-main .icon {
+  font-size: 200%;
+  color: #008000;
+}
+
+#head-main .icon i {
+  padding-right: 15px;
+}
+
+#head-main .icon i:hover {
+  cursor: pointer;
+}
+
+/* Bộ lọc ngang */
+
+.hien-san-pham .bo-loc-ngang {
+  height: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.styled-select {
+  height: 35px;
+  width: 140px;
+  margin-right: 10px;
+}
+
+.styled-select select {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  height: 29px;
+  padding-left: 10px;
+}
+
+.semi-square {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: #3b8ec2;
+}
+
+.blue select {
+  color: #000;
+}
+
+/* Thanh search phần quản lý sản phẩm */
+#search-user input[type="text"] {
+  border: 1px solid #3B8EC2;
+  height: 36px;
+}
+
+#search-user button[type="submit"] {
+  height: 36px;
+  background-color: #3B8EC2;
+}
+
+#search-user i {
+  display: block;
+}
+
+/* Phần phân trang */
+
+.pagination {
+  display: inline-block;
+  float: right;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #2196F3;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #0B7DDA;
+  border-radius: 5px;
+}
+
+#icon-3-cham i {
+  margin-top: -40px;
+  margin-right: 10px;
+  font-size: 150%;
+  float: right;
+  color: #0C3573;
+}
+
+#icon-3-cham i:hover {
+  cursor: pointer;
+}
+
+#add-product {
+  font-size: 700%;
+  color: #0C3573;
+  text-align: center;
+  background-color: #FDEADA;
+}
+
+#add-product:hover {
+  cursor: pointer;
+}
+
+#user-profile-img img {
+  width: 100%;
+  height: auto;
+}
+
+#user-profile-img {
+  position: relative;
+}
+
+#user-profile-img .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#user-profile-img .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#user-profile-img:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#user-profile-info {
+  padding: 10px;
+  border: 1px solid #0C3573;
+}
+
+#user-profile-info name {
+  color: #0C3573;
+  font-size: 120%;
+  font-weight: 600;
+}
+
+#user-profile-info star {
+  color: #3B8EC2;
+}
+
+.dropbtn-1 {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn-1:hover, .dropbtn-1:focus {
+}
+
+.dropdown-1 {
+    position: relative;
+}
+
+.dropdown-content-1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content-1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-1 a:hover {background-color: #f1f1f1}
+
+.show-1 {display:block;}

@@ -1,0 +1,44 @@
+.modal-title {
+  font-weight: 600;
+  color: #268bb9;
+  font-size: 25px;
+  text-align: center;
+}
+
+.submit-logIn {
+  background-color: #2c87b8;
+  color: white;
+  width: 50%;
+}
+
+.submit-logIn:hover {
+  color: #fff;
+}
+
+.modal-footer {
+  justify-content: center;
+}
+
+.media-login {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.center-pt {
+  text-align: center;
+  font-size: 14px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-item {
+  padding: 10px 0;
+  padding: 10px 0;
+  vertical-align: middle;
+  width: 200px;
+  text-align: center;
+  font-weight: 400;
+}
